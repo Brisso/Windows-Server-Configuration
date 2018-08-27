@@ -7,4 +7,6 @@
 ## Script designed to Export List of Users From AD into the Bulk Import Format.
 
 
-## Script Needs to be Updated Here
+# The Import-Module cmdlet adds the AD module to the current session. 
+Import-Module ActiveDirectory
+Get-ADUser -Filter * -Properties * | export-csv c:\ADusers.csv
